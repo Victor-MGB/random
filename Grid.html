@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            grid-template-rows: 50px 1fr 50px;
+            grid-template-areas: 'aside header'
+            'aside main'
+            'aside footer';
+            height: 100vh;
+            background-color: #0000ff62;
+            width: 100vw;
+        }
+        .header{
+            grid-area: header;
+            background-color: aqua;
+            border-radius: 0;
+            text-align: center;
+            border: none;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: aquamarine;
+            border: none;
+            border-radius: 5px;
+        }
+        .main{
+            grid-area: main;
+            background-color: olive;
+            border: none;
+            border-radius: 5px;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: teal;
+            border: none;
+            border-radius: 5px;
+        }
+        .overview-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            background-color: darkblue;
+            border: none;
+            border-radius: 5px;
+        }
+        .chart-content{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 200px 200px;
+            grid-template-areas: 'chart overview'
+            'chart overview';
+            grid-gap: 10px;
+            background-color: gold;
+            border: none;
+            border-radius: 5px;
+        }
+        .chart{
+            grid-area: chart;
+            background-color: lawngreen;
+            border: none;
+            border-radius: 5px;
+        }
+        .chart-overview{
+            grid-area: overview;
+            background-color: hotpink;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">...</header>
+        <aside class="aside">...</aside>
+        <main class="main">
+            <div class="overview-content">
+                <div class="overview-car"></div>
+                <div class="overview-car"></div>
+                <div class="overview-car"></div>
+            </div>
+
+            <div class="chart-content">
+                <div class="chart">...</div>
+                <div class="chart-overview">...</div>
+                <div class="chart-overview">...</div>
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>

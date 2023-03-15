@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP PASSWORD</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #000000;
+            background: -webkit-linear-gradient(to right,#434343,
+            #000000);
+        }
+        .container{
+            display: flex;
+            flex-flow: column;
+            height: 100%;
+            align-items: center;
+            justify-content: space-around;
+        }
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: honeydew;
+        }
+        button{
+            width: 150px;
+            height: 40px;
+            margin: 25px auto 0px auto;
+            font-family: sans-serif;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            background-color: #616161;
+        }
+        .userinput{
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            margin: 10px;
+            height: 35px;
+            width: 65px;
+            border: none;
+            border-radius: 7px;
+            text-align: center;
+            font-family: sans-serif;
+            background-color: #Eef2f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>ENTER OTP</h1>
+    <div class="userprint">
+        <input type="text" id='ist' maxlength="1" onkeyup="clickEvent(this,'sec')">
+        <input type="text" id='sec' maxlength="1" onkeyup="clickEvent(this,'third')">
+        <input type="text" id='third' maxlength="1" onkeyup="clickEvent(this,'fourth')">
+        <input type="text" id='fourth' maxlength="1" onkeyup="clickEvent(this,'fifth')">
+        <input type="text" id='fifth' maxlength="1">
+    </div>
+    <button>confirm code</button>
+</div>
+
+<script>
+function clickEvent(first,last){
+    if(first.focus.lenght){
+        document.getElementById(last).focus()
+    }
+}
+</script>
+</body>
+</html>
